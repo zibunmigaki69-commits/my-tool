@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>かんたんツール</title>
+</head>
+<body>
+
+<h2>画像リンク作成ツール</h2>
+
+<p>画像URL</p>
+<input id="img" style="width:90%">
+
+<p>リンク先URL</p>
+<input id="link" style="width:90%">
+
+<br><br>
+<button onclick="make()">URLを作る</button>
+
+<p id="out"></p>
+
+<script>
+function make() {
+  const img = document.getElementById("img").value;
+  const link = document.getElementById("link").value;
+
+  const result =
+    "https://example.com/?img=" + img + "&link=" + link;
+
+  document.getElementById("out").innerText = result;
+}
+</script>
+
+</body>
+</html>
